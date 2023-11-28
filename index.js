@@ -17,48 +17,50 @@
 //     console.log(skaicius*2);
 // }
 //5
-// for (let index = 0; index <5; index++){
-//     console.log(index);
-//     if (index === 3){break}
+// for (let i = 0; i <5; i++){
+//     console.log(i);
+//     if (i === 3)
+//     break;
 // }
 //6
 // for(let i = 0; i < 11; i++){
-//     if (i === 7){continue; }
+//     if (i === 7)
+//     continue; 
 //     console.log(i)
 // }
 
 /////////////////////////// for ... in ciklas pavyzdziai ///////////////////////////////////
 
-let person = {
-    name: "Sam",
-    age: 33,
-    job: "officer",
-};
-for (let key in person){
-    console.log(key);
-}
+// let person = {
+//     name: "Sam",
+//     age: 33,
+//     job: "officer",
+// };
+// for (let key in person){
+//     console.log(key);
+// }
 
-let zmogus = {
-    name: "Will",
-    age: 37,
-    job: "actor",
-    hobbies: {
-        1: "swimming",
-        2: "reading",
-        3: "sleeping",
-    } 
-};
-for(let key in zmogus.hobbies){
-    let hobby = zmogus.hobbies[key];
-    console.log(`My hobby are ${hobby}`)
-}
-for(let key in zmogus){
-    if (key === 'hobbies'){
-        for(let hobby in zmogus[key]){
-            console.log(`My hobby is: ${zmogus[key][hobby]}`)
-        }
-    }
-}
+// let zmogus = {
+//     name: "Will",
+//     age: 37,
+//     job: "actor",
+//     hobbies: {
+//         1: "swimming",
+//         2: "reading",
+//         3: "sleeping",
+//     } 
+// };
+// for(let key in zmogus.hobbies){
+//     let hobby = zmogus.hobbies[key];
+//     console.log(`My hobby are ${hobby}`)
+// }
+// for(let key in zmogus){
+//     if (key === 'hobbies'){
+//         for(let hobby in zmogus[key]){
+//             console.log(`My hobby is: ${zmogus[key][hobby]}`)
+//         }
+//     }
+// }
 
 //1 uzd
 const leFamily = {
@@ -80,19 +82,46 @@ const leFamily = {
     dog: 7,
     parrot: 2,
 };
-let skaitl = 0
+let skaitl = 0;
 for(let key in leFamily){
-    console.log(key);
-    console.log(leFamily[key])
+    // console.log(key);
+    // console.log(leFamily[key])
     if (leFamily[key] > 65){
     skaitl++
     }
 }
-console.log(`Yra ${skaitl}`);
+console.log(`Yra ${skaitl} dideniu nei 65`);
 
 //2 uzd
+let skaitl2 = 0;
+for (let key in leFamily){
+    if (leFamily[key] % 2 === 0){
+        skaitl2++
+    }
+}
+console.log(`yra ${skaitl2} lyginiai skaiciai`)
+
+let skaitl3 = 0;
+for (let key in leFamily){
+    if (leFamily[key] % 2 !== 0){
+        skaitl3++
+    }
+}
+console.log(`yra ${skaitl3} nelyginiai skaiciai`)
 
 
+const numbers = [2, 34, 54, 67,77,1,99];
+let kiekSk = 0
+for(let number of numbers){
+    kiekSk++
+}
+console.log("Yra skaiciu masyve " + kiekSk);
 
 
-
+const words = ["Geros","dienytes","geros","kavytes"];
+ for(const word of words){
+    for(const char of word){
+        console.log(`${word}: ${word.length}`);
+        break;
+    }
+ }
