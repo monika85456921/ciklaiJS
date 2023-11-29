@@ -196,7 +196,7 @@
 // let vidurkis = 0;
 // let skaic = 0;
 // do {
-//   skaic = parseInt(prompt(`Iveskite skaiciu`));
+//   skaic = parseInt(prompt("Iveskite skaiciu: "));
 //   if (skaic >= 0) {
 //     sk++;
 //     suma += skaic;
